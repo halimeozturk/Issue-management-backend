@@ -1,12 +1,16 @@
 package com.issue.issuemanagement.dto;
 
 import com.issue.issuemanagement.entity.IssueStatus;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class IssueDto {
     private Long id;
     private String description;

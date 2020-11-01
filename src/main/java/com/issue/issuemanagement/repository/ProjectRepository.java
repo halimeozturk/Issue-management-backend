@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public interface ProjectRepository extends JpaRepository<Project,Long> {
 
-    List<Project> getByProjectCode(String projectCode);
+    Project getByProjectCode(String projectCode);
 
     List<Project> getByProjectCodeContains(String projectCode);
 
@@ -21,4 +21,5 @@ public interface ProjectRepository extends JpaRepository<Project,Long> {
 
     List<Project> findAll(Sort sort);
 
+    Project getByProjectCodeAndIdNot(String projectCode, Long id);
 }
